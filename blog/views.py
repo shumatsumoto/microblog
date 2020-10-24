@@ -7,5 +7,5 @@ class BlogListView(ListView):
 	model = Blog
 
 
-class BlogDetalView(DetailView):
+class BlogDetailView(DetailView):
 	model = Blog
