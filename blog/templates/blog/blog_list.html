@@ -1,2 +1,13 @@
-<h1>Blog List</h1>
-<p>テスト　テスト</p>
+<html>
+  <head>
+    <title>MicroBlog</title>
+  </head>
+  <body>
+    <h1>MicroBlog</h1>
+    <div>
+			{% for blog in object_list %}
+				<p>{{ blog.content }}：{{ blog.posted_date }}</p>
+			{% endfor %}
+    </div>
+  </body>
+</html>
