@@ -54,7 +54,18 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">{% block body %} {% endblock %}</div>
+    <div class="container">
+
+      {% if messages %}
+        <ul class="list-unstyled">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% block body %}{% endblock %}
+    </div>
 
     <!-- jQuery -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
