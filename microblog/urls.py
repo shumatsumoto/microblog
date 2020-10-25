@@ -26,6 +26,6 @@ urlpatterns = [
     path('<int:pk>/delete', BlogDeleteView.as_view(), name='delete'),
     path('create', BlogCreateView.as_view(), name='create'),
     path('login', LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout', LogoutView.as_view(), name='logout'),
+    path('logout', LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('admin/', admin.site.urls),
 ]
