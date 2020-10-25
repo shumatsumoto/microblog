@@ -17,11 +17,13 @@ class BlogCreateView(CreateView):
 	model = Blog
 	form_class = BlogForm
 	success_url = reverse_lazy('index')
+	template_name = 'blog/blog_create_form.html'
 
 
 class BlogUpdateView(UpdateView):
 	model = Blog
 	form_class = BlogForm
+	template_name = 'blog/blog_update_form.html'
 
 	def get_success_url(self):
 		blog_pk = self.kwargs['pk']
