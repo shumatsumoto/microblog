@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>削除の確認</h1>
+<p class="text text-danger">本当に削除しても良いですか？</p>
+<form action="" method="POST">
+	{% csrf_token %}
+	{{ form }}
+	<button class="btn btn-danger" type="submit">削除</button>
+	<a href="{% url 'index' %}" class="btn btn-default">キャンセル</a>
+</form>
+{% endblock %}
